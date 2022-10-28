@@ -20,12 +20,15 @@
 
 [//]: # (  </a>)
 
-<h3 align="center">Algorand React Marketplace</h3>
+<h3 align="center">Hotel Rooms Reservations</h3>
 
 </div>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
+This is Hotel Reservation DApp, that allows users to be able to make reservations to nice hotels for their trips. Users pay the booking price for the hotel room and the amount is usually calculated by the number of nights the user wishes to stay in the hotel. For testing purposes a night is equivalent to 60 seconds. User's also have to pay a reservation holding fee which is then refunded back to the user after the user ends the reservation, a form of incentive to make users not hold down rooms after their reservation has ended.
+
+Live demo [here](https://OmoEsther.github.io/Hotel-Room-Reservations)
 <!-- GETTING STARTED -->
 
 ## :point_down: Getting Started
@@ -38,7 +41,7 @@
 
 1. Clone repo
    ```sh
-   git clone https://github.com/dacadeorg/algorand-react-marketplace.git
+   git clone https://github.com/OmoEsther/Hotel-Room-Reservations.git
    ```
 
 2. Install packages
