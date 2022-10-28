@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Hotel-Room-Reservations)/static/css/main.a174681c.chunk.css",
+    "main.js": "/Hotel-Room-Reservations)/static/js/main.b0de4155.chunk.js",
+    "main.js.map": "/Hotel-Room-Reservations)/static/js/main.b0de4155.chunk.js.map",
+    "runtime-main.js": "/Hotel-Room-Reservations)/static/js/runtime-main.75155554.js",
+    "runtime-main.js.map": "/Hotel-Room-Reservations)/static/js/runtime-main.75155554.js.map",
+    "static/css/2.4e63f34a.chunk.css": "/Hotel-Room-Reservations)/static/css/2.4e63f34a.chunk.css",
+    "static/js/2.4d203b57.chunk.js": "/Hotel-Room-Reservations)/static/js/2.4d203b57.chunk.js",
+    "static/js/2.4d203b57.chunk.js.map": "/Hotel-Room-Reservations)/static/js/2.4d203b57.chunk.js.map",
+    "static/js/3.83b417cc.chunk.js": "/Hotel-Room-Reservations)/static/js/3.83b417cc.chunk.js",
+    "static/js/3.83b417cc.chunk.js.map": "/Hotel-Room-Reservations)/static/js/3.83b417cc.chunk.js.map",
+    "index.html": "/Hotel-Room-Reservations)/index.html",
+    "static/css/2.4e63f34a.chunk.css.map": "/Hotel-Room-Reservations)/static/css/2.4e63f34a.chunk.css.map",
+    "static/css/main.a174681c.chunk.css.map": "/Hotel-Room-Reservations)/static/css/main.a174681c.chunk.css.map",
+    "static/js/2.4d203b57.chunk.js.LICENSE.txt": "/Hotel-Room-Reservations)/static/js/2.4d203b57.chunk.js.LICENSE.txt",
+    "static/media/bootstrap-icons.css": "/Hotel-Room-Reservations)/static/media/bootstrap-icons.c1d7432e.woff",
+    "static/media/hotelroom.76d53c1d.jpg": "/Hotel-Room-Reservations)/static/media/hotelroom.76d53c1d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75155554.js",
+    "static/css/2.4e63f34a.chunk.css",
+    "static/js/2.4d203b57.chunk.js",
+    "static/css/main.a174681c.chunk.css",
+    "static/js/main.b0de4155.chunk.js"
+  ]
+}
