@@ -53,13 +53,18 @@ class Room:
 
         is_not_reserved = App.globalGet(self.Variables.is_reserved) == Int(0)
 
+        is_not_owner =  Txn.sender != Global.creator_address(),
+         
+
         can_proceed = And(
             is_not_reserved,
             valid_number_of_transactions,
+            is_not_owner,
             valid_payment_to_contract
         )
 
         update_state = Seq([
+            Assert(Btoi(Txn.application_args[1]) > Int(0)),  # number of nights must be 1 or more
             App.globalPut(self.Variables.current_reserved_to, Txn.accounts[0]),
             App.globalPut(
                 self.Variables.current_reservation_ends,
