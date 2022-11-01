@@ -2,7 +2,7 @@ from pyteal import *
 
 
 class Room:
-
+    admin = Addr("/...")
     class Variables:
         name = Bytes("NAME")
         image = Bytes("IMAGE")
@@ -33,6 +33,7 @@ class Room:
             App.globalPut(self.Variables.is_reserved, Int(0)),
             Approve()
         ])
+        
 
     def make_reservation(self):
         no_of_nights = Txn.application_args[1]
@@ -44,6 +45,7 @@ class Room:
         total_amount_to_be_sent = (App.globalGet(
             self.Variables.price_per_night) * Btoi(no_of_nights)) + self.Variables.reservation_fee
 
+        # verify payment transaction
         valid_payment_to_contract = And(
             Gtxn[1].type_enum() == TxnType.Payment,
             Gtxn[1].receiver() == Global.current_application_address(),
@@ -51,6 +53,7 @@ class Room:
             Gtxn[1].sender() == Gtxn[0].sender(),
         )
 
+        # check if the hotel is not reserved
         is_not_reserved = App.globalGet(self.Variables.is_reserved) == Int(0)
 
         can_proceed = And(
@@ -84,6 +87,21 @@ class Room:
             ),
             InnerTxnBuilder.Submit(),
         )
+
+    def edit_reservation_amount(self):
+        amount = Btoi(Txn.application_args[1])
+        return Seq([
+            Assert(
+                Global.group_size() == Int(1),
+                #check the length of transaction arguments
+                Txn.application_args.length() == Int(2),
+                # check if the sender of transaction is the admin of the dapp
+                Txn.sender() == self.admin
+            ),
+            #update the price per night
+            App.globalPut(self.Variables.price_per_night, amount)
+        ])
+        
 
     def end_reservation(self):
         reservation_ended = Global.latest_timestamp() >= App.globalGet(
